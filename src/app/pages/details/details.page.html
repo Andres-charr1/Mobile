@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle del Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  @if(product != null){
+  <ion-card>
+    <img [src]="product.images[0]" alt="{{ product.title }}" />
+    <ion-card-header>
+      <ion-card-title>{{ product.title }}</ion-card-title>
+     
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Descripción:</strong> {{ product.description }}</p>
+      <p><strong>Precio:</strong> ${{ product.price }}</p>
+      <p><strong>Categoría:</strong> {{ product.category.name }}</p>
+    </ion-card-content>
+  </ion-card>
+
+}
+
+</ion-content>
